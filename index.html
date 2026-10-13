@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Profit Margin Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Profit margin calculator</h1>
+<p class="sub">Enter your numbers to see profit, margin and markup.</p>
+
+<section class="panel">
+<div class="grid">
+<div><label for="rev">Revenue (selling price)</label><input id="rev" type="number" inputmode="decimal" min="0" step="any" placeholder="1000"></div>
+<div><label for="cogs">Cost of goods sold</label><input id="cogs" type="number" inputmode="decimal" min="0" step="any" placeholder="600"></div>
+<div><label for="opex">Operating expenses</label><input id="opex" type="number" inputmode="decimal" min="0" step="any" placeholder="150"></div>
+<div><label for="tax">Tax rate (%)</label><input id="tax" type="number" inputmode="decimal" min="0" step="any" placeholder="0"></div>
+</div>
+<p class="note"><button id="clear" type="button">Clear</button></p>
+</section>
+
+<section class="panel" aria-live="polite">
+<div class="result big"><span>Net profit margin</span><b id="nm">–</b></div>
+<div class="bar"><i id="bar"></i></div>
+<div class="result"><span>Gross profit</span><b id="gp">–</b></div>
+<div class="result"><span>Gross margin</span><b id="gm">–</b></div>
+<div class="result"><span>Operating profit</span><b id="op">–</b></div>
+<div class="result"><span>Net profit (after tax)</span><b id="np">–</b></div>
+<div class="result"><span>Markup on cost</span><b id="mk">–</b></div>
+<p class="note">Gross margin = (revenue − COGS) ÷ revenue. Markup = (revenue − COGS) ÷ COGS. Tax applies only when operating profit is positive.</p>
+</section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
